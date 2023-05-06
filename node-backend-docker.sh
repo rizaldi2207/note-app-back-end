@@ -15,7 +15,7 @@ echo "COPY package-lock.json /home/myapp/" >> tempdir/Dockerfile
 echo "RUN npm install" >> tempdir/Dockerfile
 
 echo "EXPOSE 5000" >> tempdir/Dockerfile
-echo "RUN npm run start" >> tempdir/Dockerfile
+echo "CMD npm run start" >> tempdir/Dockerfile
 
 cd tempdir
 docker build -t noteapp .
